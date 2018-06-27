@@ -1,0 +1,5 @@
+getElementById() -> method to "find" an HTML element (with id="demo") and changes the element content (innerHTML) to "Hello JavaScript":
+
+    document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
