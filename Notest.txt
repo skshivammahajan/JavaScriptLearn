@@ -1,0 +1,207 @@
+getElementById() -> method to "find" an HTML element (with id="demo") and changes the element content (innerHTML) to "Hello JavaScript":
+
+    document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+
+Keyword Description
+break   Terminates a switch or a loop
+continue    Jumps out of a loop and starts at the top
+debugger    Stops the execution of JavaScript, and calls (if available) the debugging function
+do ... while    Executes a block of statements, and repeats the block, while a condition is true
+for Marks a block of statements to be executed, as long as a condition is true
+function    Declares a function
+if ... else Marks a block of statements to be executed, depending on a condition
+return  Exits a function
+switch  Marks a block of statements to be executed, depending on different cases
+try ... catch   Implements error handling to a block of statements
+var Declares a variable
+
+
+typeof  Returns the type of a variable
+instanceof  Returns true if an object is an instance of an object type
+
+
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
+var cars = ["Saab", "Volvo", "BMW"];  //Arrays
+true
+false
+
+
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+name = person.fullName();
+
+
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object
+
+
+same element --- this no need of any id 
+
+<span onmouseover="this.style.color='red'">Mouse over me!</span>
+
+String Length
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+
+var x = "We are the so-called \"Vikings\" from the north.";
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+Example
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+
+
+Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+
+var pos = str.indexOf("locate",15);
+second parameter as the starting position for the search:
+
+The search() method searches a string for a specified value and returns the position of the match:
+
+Example
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+
+
+he search() method searches a string for a specified value and returns the position of the match:
+
+Example
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+
+
+The search() method cannot take a second start position argument.
+The indexOf() method cannot take powerful search values (regular expressions).
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+
+substring() is similar to slice().
+
+The difference is that substring() cannot accept negative indexes.
+
+Example
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+
+
+The substr() Method
+substr() is similar to slice().
+
+The difference is that the second parameter specifies the length of the extracted part.
+
+he replace() method replaces a specified value with another value in a string:
+
+Example
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+
+The replace() method does not change the string it is called on. It returns a new string.
+By default, the replace() function replaces only the first match:
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+
+Example
+str = "Please visit Microsoft!";
+var n = str.replace(/MICROSOFT/i, "W3Schools");
+
+Note that regular expressions are written without quotes.
+
+To replace all matches, use a regular expression with a /g flag (global match):
+
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace(/Microsoft/g, "W3Schools");
+
+
+Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+
+Example
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+
+A string is converted to lower case with toLowerCase():
+
+Example
+var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+
+The concat() Method
+concat() joins two or more strings:
+
+Example
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+All string methods return a new string. They don't modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+
+Extracting String Characters
+There are 2 safe methods for extracting string characters:
+
+charAt(position)
+charCodeAt(position)
+The charAt() Method
+The charAt() method returns the character at a specified index (position) in a string:
+
+Example
+var str = "HELLO WORLD";
+str.charAt(0);            // returns H
+
+The charCodeAt() Method
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+Example
+var str = "HELLO WORLD";
+
+str.charCodeAt(0);         // returns 72
+
+
+A string can be converted to an array with the split() method:
+
+Example
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pi
+
+
+ou can use the global JavaScript function isNaN() to find out if a value is a number:
+
+Example
+var x = 100 / "Apple";
+isNaN(x);               // returns true because x is Not a Number
+
+
+Infinity
+NaN
+
+toString() returns a number as a string.
+
+
+for (i = 0; i < cars.length; i++) { 
+    text += cars[i] + "<br>";
+}
+
+Converting a JSON Text to a JavaScript Object
+var obj = JSON.parse(text);
